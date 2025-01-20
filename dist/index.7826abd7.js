@@ -2959,8 +2959,36 @@ const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
     lineNumber: 6,
     columnNumber: 20
 }, undefined);
+// for writing multiline JSX we can use () and inside the jsx we can use JavaScript using crulu bracket { } which is not possible in html so that is one more different between jsx and html 
+const age = 21;
+const jsxHeading2 = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    children: [
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            id: "heading",
+            children: "Hello world"
+        }, void 0, false, {
+            fileName: "App.js",
+            lineNumber: 12,
+            columnNumber: 9
+        }, undefined),
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: [
+                "The age of syam is: ",
+                age
+            ]
+        }, void 0, true, {
+            fileName: "App.js",
+            lineNumber: 13,
+            columnNumber: 9
+        }, undefined)
+    ]
+}, void 0, true, {
+    fileName: "App.js",
+    lineNumber: 11,
+    columnNumber: 5
+}, undefined);
 const root = (0, _clientDefault.default).createRoot(document.getElementById('root'));
-root.render(jsxHeading);
+root.render(jsxHeading2);
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
