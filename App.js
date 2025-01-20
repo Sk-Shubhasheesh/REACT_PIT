@@ -15,6 +15,37 @@ const jsxHeading2 = (
 )
 
 
+
+
+// Component - It is just normal javascript function which return some piece of jsx. In react there are two type of component:
+// 1. Class Based component - OLD version of writing react code
+//2. Functional Based Component - New way of writing react code
+              // way of written component
+const Heading = ()=>{
+    return <h1 id='heading'>Heading1</h1>
+}
+const Heading2 = ()=>(
+    // using compnent inside a component
+    <div>
+        <Heading />
+        <h2>I am heading 2</h2>
+    </div>
+)
+const Heading3 = ()=> <h1 id='heading'>Heading</h1>
+
+
+
+
+
+
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(jsxHeading2)
+
+// root.render(jsxHeading2)
+
+//Passing component in render
+root.render(<Heading2/>);
 

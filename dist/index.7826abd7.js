@@ -2987,8 +2987,64 @@ const jsxHeading2 = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
     lineNumber: 11,
     columnNumber: 5
 }, undefined);
+// Component - It is just normal javascript function which return some piece of jsx. In react there are two type of component:
+// 1. Class Based component - OLD version of writing react code
+//2. Functional Based Component - New way of writing react code
+// way of written component
+const Heading = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        id: "heading",
+        children: "Heading1"
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 25,
+        columnNumber: 12
+    }, undefined);
+};
+_c = Heading;
+const Heading2 = ()=>// using compnent inside a component
+    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heading, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 30,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "I am heading 2"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 31,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 29,
+        columnNumber: 5
+    }, undefined);
+_c1 = Heading2;
+const Heading3 = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        id: "heading",
+        children: "Heading"
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 34,
+        columnNumber: 23
+    }, undefined);
+_c2 = Heading3;
 const root = (0, _clientDefault.default).createRoot(document.getElementById('root'));
-root.render(jsxHeading2);
+// root.render(jsxHeading2)
+//Passing component in render
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Heading2, {}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 50,
+    columnNumber: 13
+}, undefined));
+var _c, _c1, _c2;
+$RefreshReg$(_c, "Heading");
+$RefreshReg$(_c1, "Heading2");
+$RefreshReg$(_c2, "Heading3");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
