@@ -4,14 +4,14 @@
 56E:\PAPA REACT\node_modules\@parcel\source-map\index.d.ts133818227110027532 0
 36E:\PAPA REACT\node_modules\env-paths133818227089529066 1
 77E:\PAPA REACT\node_modules\entities\lib\esm\generated\decode-data-html.js.map133818227101337557 0
-26E:\PAPA REACT\package.json133818233878978068 0
+26E:\PAPA REACT\package.json133818238832040367 0
 44E:\PAPA REACT\node_modules\@msgpackr-extract133818233878938092 1
 33E:\PAPA REACT\node_modules\@lezer133818227075867307 1
 42E:\PAPA REACT\node_modules\chalk\readme.md133818227091725780 0
 18E:\PAPA REACT\dist133818234612137786 1
 77E:\PAPA REACT\node_modules\@parcel\runtime-js\src\helpers\worker\js-loader.js133818227101967557 0
 62E:\PAPA REACT\node_modules\htmlparser2\lib\WritableStream.d.ts133818227102797567 0
-24E:\PAPA REACT\.gitignore133818235096979467 0
+24E:\PAPA REACT\.gitignore133818237700088056 0
 89E:\PAPA REACT\node_modules\posthtml\node_modules\dom-serializer\node_modules\entities\lib133818227098907535 1
 58E:\PAPA REACT\node_modules\caniuse-lite\data\regions\AT.js133818227103237538 0
 69E:\PAPA REACT\node_modules\@parcel\markdown-ansi\src\markdown-ansi.js133818227087629448 0
