@@ -1,0 +1,28 @@
+{
+  "name": "papa-react",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Sk-Shubhasheesh/REACT_PIT#readme",
+  "bugs": {
+    "url": "https://github.com/Sk-Shubhasheesh/REACT_PIT/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sk-Shubhasheesh/REACT_PIT.git"
+  },
+  "license": "ISC",
+  "author": "Shubhasheesh",
+  "type": "commonjs",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
