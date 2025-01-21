@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 // import { productList } from "../utils/constant"
 import Product from "./Product"
+import Skeleton from "./skeleton"
 // Named export
 export const ProductCard = () => {
     const [listOfProduct, setlistOfProduct] = useState([])
@@ -17,6 +18,11 @@ export const ProductCard = () => {
         
     }
 
+    // conditional rendering
+    // if(listOfProduct.length===0){
+    //     return <Skeleton/>
+    // }
+
 
     const topRatedProducts = () => {
         const filterProduct = listOfProduct.filter(product => product.rating.rate >= 4);
@@ -24,7 +30,7 @@ export const ProductCard = () => {
         
 
     }
-    return (
+    return listOfProduct.length===0?<Skeleton/ >: (
         <div>
             <button onClick={topRatedProducts} style={{ "marginTop": "10px" }}>Top rated product</button>
             <div className='product_card'>
