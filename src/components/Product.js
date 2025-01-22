@@ -1,4 +1,4 @@
-const Product = ({product})=>{
+export const Product = ({product})=>{
 // destructuring the props
 const {image, title, price, rating} = product
     return (
@@ -12,4 +12,16 @@ const {image, title, price, rating} = product
     )
 }
 
-export default Product;
+
+
+export const HOF = (Product)=>{
+    return (props)=>{
+        return (
+            <div className="relative">
+            <span className="absolute -left-2 -top-2 bg-black text-white px-4 py-1 rounded-md">Best Seller</span>
+            <Product {...props} />
+        </div>
+        )
+    }
+
+}

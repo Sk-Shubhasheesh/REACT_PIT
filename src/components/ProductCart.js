@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 // import { productList } from "../utils/constant"
-import Product from "./Product"
+import {Product, HOF} from "./Product"
 import Skeleton from "./skeleton"
 import { Link } from "react-router-dom"
 // Named export
@@ -23,6 +23,8 @@ export const ProductCard = () => {
         setFilterProduct(resData)
 
     }
+    const HOFComponent = HOF(Product);
+
 
     // conditional rendering
     // if(listOfProduct.length===0){
@@ -59,7 +61,12 @@ export const ProductCard = () => {
                 {
                     filterProduct.map((product, index) => {
                         return (
-                            <Link key={product.id} to={`/product/${product.id}`}><Product product={product} /></Link>
+                            <Link key={product.id} to={`/product/${product.id}`}>
+                                {
+                                    product.rating.rate>=4 ? <HOFComponent product={product} />: 
+                                    <Product product={product} />
+                                }
+                               </Link>
                         )
                     })
                 }
