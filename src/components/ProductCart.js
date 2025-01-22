@@ -32,29 +32,34 @@ export const ProductCard = () => {
 
     const topRatedProducts = () => {
         const filterProduct = listOfProduct.filter(product => product.rating.rate >= 4);
-        
+
         setlistOfProduct(filterProduct);
 
     }
     return listOfProduct.length === 0 ? <Skeleton /> : (
         <div>
-            <div style={{ "marginTop": "10px" }}>
-                <input type="text" onChange={(e)=>setSerchText(e.target.value)} value={serchText} />
-                <button onClick={()=>{
-                    const fiteredData = listOfProduct.filter((product)=>{
+            <div className="mt-10 flex mx-5 space-x-10">
+                <div>
+                    <input className="border border-gray-7 p-3" type="text" onChange={(e) => setSerchText(e.target.value)} value={serchText} />
+                    <button onClick={() => {
+                    const fiteredData = listOfProduct.filter((product) => {
                         return product.title.toLowerCase().includes(serchText.toLowerCase())
 
                     })
                     setFilterProduct(fiteredData)
-                }}>Search</button>
+                }} className="bg-purple-600 px-6 py-2 rounded-md text-[#f0f0f0f0]">Search</button>
+                </div>
+                
+
+                <button onClick={topRatedProducts} className="bg-purple-600 px-6 py-2 rounded-md text-[#f0f0f0f0]">Top rated product</button>
             </div>
-            <button onClick={topRatedProducts} style={{ "marginTop": "10px" }}>Top rated product</button>
-            <div className='product_card'>
+
+            <div className='max-w-7xl mx-auto grid grid-cols-5 gap-4 mt-10'>
 
                 {
                     filterProduct.map((product, index) => {
                         return (
-                            <Link key={product.id} to={`/product/${product.id}`}><Product  product={product} /></Link>
+                            <Link key={product.id} to={`/product/${product.id}`}><Product product={product} /></Link>
                         )
                     })
                 }

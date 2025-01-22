@@ -1,4 +1,9 @@
-.navbar{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* .navbar{
     display:  flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
@@ -39,4 +44,5 @@
     height: 300px;
     background-color: #f0f0f0f0;
     margin: 10px;
-}
+} */
+
