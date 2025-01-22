@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 // import { productList } from "../utils/constant"
 import Product from "./Product"
 import Skeleton from "./skeleton"
+import { Link } from "react-router-dom"
 // Named export
 export const ProductCard = () => {
     const [listOfProduct, setlistOfProduct] = useState([])
@@ -53,7 +54,7 @@ export const ProductCard = () => {
                 {
                     filterProduct.map((product, index) => {
                         return (
-                            <Product key={product.id} product={product} />
+                            <Link key={product.id} to={`/product/${product.id}`}><Product  product={product} /></Link>
                         )
                     })
                 }
