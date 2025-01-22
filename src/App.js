@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import ReactDOM from'react-dom/client';
 // default export
 import Navbar from './components/Navbar';
@@ -12,6 +12,13 @@ import Error from './components/Error';
 import Men from './components/Men';
 import ProductDetails from './components/ProductDetails';
 import About from './components/About';
+import Grocery from './components/Grocery';
+// import Gerocery from './components/Gerocery'; // normal importna karke hum lazy me dalenge
+
+
+// lazy loading or dynamic import or code spliting
+
+const grocery = lazy(()=>import('./components/Grocery'))
 
 const App = ()=>{
     return( 
@@ -46,6 +53,10 @@ const appRouter = createBrowserRouter([
             {
                 path:"/about",
                 element:<About />
+            },
+            {
+                path:"/grocery",
+                element:<Suspense fallback={<h1>Loading.....</h1>}><Grocery /></Suspense>
             }
         ],
         errorElement:<Error />

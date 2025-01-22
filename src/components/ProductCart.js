@@ -32,8 +32,8 @@ export const ProductCard = () => {
 
     const topRatedProducts = () => {
         const filterProduct = listOfProduct.filter(product => product.rating.rate >= 4);
+        
         setlistOfProduct(filterProduct);
-
 
     }
     return listOfProduct.length === 0 ? <Skeleton /> : (
