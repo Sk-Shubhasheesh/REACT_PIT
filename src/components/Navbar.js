@@ -11,6 +11,7 @@ const Navbar = ()=>{
                 <li>ABOUT</li>
                 <li><Link to="/kid">KIDS</Link></li>
                 <li>CARD</li>
+                <li><Link to="/about">ABOUT</Link></li>
                 <button onClick={()=>{
                   btnName === "Light" ?setBtnName("Dark"):setBtnName("Light");
 

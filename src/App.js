@@ -11,6 +11,7 @@ import Kids from './components/Kids';
 import Error from './components/Error';
 import Men from './components/Men';
 import ProductDetails from './components/ProductDetails';
+import About from './components/About';
 
 const App = ()=>{
     return( 
@@ -41,6 +42,10 @@ const appRouter = createBrowserRouter([
             {
                 path:"/product/:productId",
                 element:<ProductDetails />
+            },
+            {
+                path:"/about",
+                element:<About />
             }
         ],
         errorElement:<Error />
