@@ -5,6 +5,12 @@ import Navbar from './components/Navbar';
 // named export
 import { ProductCard } from './components/ProductCart';
 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import Kids from './components/Kids';
+import Error from './components/Error';
+import Men from './components/Men';
+
 const App = ()=>{
     return( 
     <div>
@@ -13,7 +19,26 @@ const App = ()=>{
     </div>)
 }
 
+const appRouter = createBrowserRouter([
+    {
+        path:"/",
+        element:<App/>,
+        errorElement:<Error />
+    },{
+        path:"/kid",
+        element:<Kids/>
+    },
+    {
+        path:"/men",
+        element:<Men />
+    }
+])
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<App />)
+root.render(<RouterProvider router={appRouter} />)
+// root.render(<App/>)
 
 
