@@ -13,6 +13,7 @@ import Men from './components/Men';
 import ProductDetails from './components/ProductDetails';
 import About from './components/About';
 import Grocery from './components/Grocery';
+import CompoC from './components/CompoC';
 // import Gerocery from './components/Gerocery'; // normal importna karke hum lazy me dalenge
 
 
@@ -24,6 +25,7 @@ const App = ()=>{
     return( 
     <div>
         <Navbar />
+        {/* <CompoC /> */}
         <Outlet />
         {/* <ProductCard /> */}
     </div>)
